@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+:root {
+  --background-grey: #f3f4f5; 
+  --primary-colour: #8f70e3;
+  --border-radius: 4px;
+  --border-color: #c6c6c6;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: min(100% - 50px, 1020px);
+    margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.align {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+    background-color: var(--background-grey);
+}
+
+/*---------------------------------------------------------------------------*/
+/*-------------------------------Fonts---------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.inter {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*---------------------------------------------------------------------------*/
+/*------------------------------Footer---------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+footer {
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+
+  .left-footer ul li{
+      display: inline;
+
+      a {
+          text-decoration: none;
+          height: 40px;
+          width: 40px;
+          padding: 5px;
+          border-radius: 50%;
+          font-size: 1.6rem;
+          background-color: rgb(255 255 255 / 10%);
+          backdrop-filter: blur(100px) saturate(140%);
+          height: 30px;
+          width: 30px;
+          border: 1px solid #dcdcdc;
+          position: relative;
+          right: 2px;
+
+          i {
+              color: #fff;
+          }
+
+          &:hover {
+              background-color: #672C36;
+              transition: color 0.25s ease-in-out;
+          }
+      }
+  }
+}
+/*---------------------------------------------------------------------------*/
+/*------------------------------Media Queries--------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+/*992px and down*/
+@media (max-width: 992px) {
+  .about-container .container {
+    flex-direction: column;
+
+    .content {
+        text-align: center;
+    }
+  }
+}
+
