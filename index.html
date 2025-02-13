@@ -13,8 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css">
-        <link rel="stylesheet" href="./assets/css/general-style.css" media="all" >
-        <link rel="stylesheet" href="./assets/css/home.css" media="all" >
+        <link rel="stylesheet" href="./assets/css/dark-home.css" media="all" >
+   
     </head>
     <body>
         <main>
@@ -27,9 +27,13 @@
                     </p>
                     <a href="./assets/SarahMitchellResume.pdf">Know More</a>
                 </div>
+                <div class="header-down-arrow" id="scroll-down">
+                    <img src="./assets/img/downarrow.png" width="50"
+                     alt ="scroll down arrow">
+                </div>
             </div>
-            <section>
-                <div class="container flex space-between">
+            <section id="about-me">
+                <div class="container flex wrap space-between">
                     <div class="content">
                         <h3>About Me</h3>
                         <p>
@@ -44,26 +48,30 @@
                             thrive in the tech industry. I’m passionate about 
                             building innovative, efficient solutions and ready 
                             to contribute as a Junior Full-Stack Developer.
+                        </p>
                     </div>
                     <figure>
-                        <image src="./assets/img/selfie1.png"></image>
+                        <img src="./assets/img/selfie1.png">
                     </figure>
                 </div>
             </section>
-            <section class = container>
-                <div class="flex gallery center">
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
-                         
+            <h3>Past Projects</h3>
+            <section class = "container flex space-between gap-10">
+                    <div class="column lg-25">
+                        <img src="./assets/img/winterpeg-example.png">
+                    </div>
+                    <div class="column lg-25">
+                        <img src="./assets/img/duck-race.png">
+                    </div>
+                    <div class="column lg-25">
+                        <img src="./assets/img/to-do.png">
+                    </div>
+                    <div class="column lg-25">
+                        <img src="./assets/img/guessing-game.png">
+                    </div>         
             </section>
             <section>
+                 <h3>Proficiencies</h3>
                 <div class="infinite-scroll">
                     <div class="overlay">
                         <div class="wrapper">
@@ -142,5 +150,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
