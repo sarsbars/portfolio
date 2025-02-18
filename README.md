@@ -15,8 +15,7 @@ Some examples I used were [Malinda Lakshan's Porfolio](https://www.malindalaksha
 
 - GitHub Pages Hosting: The site is hosted on GitHub Pages, indicating it is a static site without server-side processing.  
 
-
--Infinite Scroll Animation: The "Proficiencies" section features an infinite scroll animation, showcasing various technologies and skills in a visually appealing manner. 
+- Infinite Scroll Animation: The "Proficiencies" section features an infinite scroll animation, showcasing various technologies and skills in a visually appealing manner. 
 
 
 
