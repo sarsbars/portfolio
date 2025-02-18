@@ -469,7 +469,7 @@ footer {
           }
 
           &:hover {
-              background-color: #672C36;
+              background-color: var(--lighter-primary);
               transition: color 0.25s ease-in-out;
           }
       }
