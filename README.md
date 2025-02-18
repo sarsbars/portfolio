@@ -2,7 +2,7 @@
 
 This is my professional portfolio for my software development career, it is also the final project for Technical Writing Skills, for the Software Development program at Manitoba Institute of Trades and Technology.
 
-[Example of Portfolio ](./assets/img/example-01.png)
+![Example of Portfolio ](./assets/img/example-01.png)
 
 
 
