@@ -4,6 +4,7 @@
   --background-grey: #f3f4f5; 
   --background: rgb(0,0,32);
   --primary-colour: #8f70e3;
+  --lighter-primary: #BBA9EE;
   --border-radius: 4px;
   --border-color: #c6c6c6;
 }
@@ -17,7 +18,7 @@
 }
 
 .container {
-    width: min(100% - 30px, 1020px);
+    width: min(100% - 30px, 980px);
     padding: 0 15px;
     margin-inline: auto;
 }
@@ -132,7 +133,7 @@ body {
 
       a {
           text-decoration: none;
-          padding: 14px 28px;
+          padding: 12px 32px;
           
           border-radius: 30px;
           color: #fff;
@@ -169,11 +170,10 @@ body {
 }
 
 .header-down-arrow:hover img {
-  transform: scale(1.1); /* Slightly enlarges the arrow on hover */
-  opacity: 0.8; /* Slightly fades the arrow on hover */
+  transform: scale(1.1); 
+  opacity: 0.8; 
   
 }
-
 
 @keyframes fade-slide-up {
   0% {
@@ -201,10 +201,6 @@ body {
   }
 }
 
-section {
-  padding: 0 0 100px 0;
-}
-
 .content {
     width: 60%;
 
@@ -224,7 +220,8 @@ h3 {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 4rem;
   text-align: center;
-  margin: 20px 0;
+  margin-top: 100px;
+  margin-bottom: 20px;
   color: var(--primary-colour);
 }
 
@@ -232,30 +229,36 @@ h3 {
 /*----------------------------About-Me Section ------------------------------*/
 /*---------------------------------------------------------------------------*/
 
-#about-me {
-  margin-top: 100px;
-  padding: 50px;
-}
 
 #about-me .container {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
+  gap: 20px;
 }
 
 #about-me .content {
-  width: 100%; 
-  margin-bottom: 40px; 
+  max-width: 500px;
 }
+
+.special-text {
+  color: var(--lighter-primary);
+  font-weight: 700;
+}
+
 p {
   color: #fff;
 }
+
 figure {
-  display: inline-block; 
-  overflow: hidden;
   width: 300px; 
-  height: 300px; 
+  height: 300px;
+  display: flex;
+  overflow: hidden;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 figure img {
@@ -263,14 +266,15 @@ figure img {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--primary-colour); 
-  box-shadow: 
-    0 0 10px 5px rgba(143, 112, 227, 0.5), 
-    0 0 20px 10px rgba(143, 112, 227, 0.3); 
-  transition: 
+  border: 3px solid var(--primary-colour);
+  box-shadow:
+    0 0 10px 5px rgba(143, 112, 227, 0.5),
+    0 0 20px 10px rgba(143, 112, 227, 0.3);
+  transition:
     box-shadow 0.3s ease-in-out,
     filter 0.3s ease-in-out;
 }
+
 
 /*---------------------------------------------------------------------------*/
 /*--------------------------------Gallery------------------------------------*/
@@ -301,22 +305,19 @@ figure img {
 /*---------------------------------------------------------------------------*/
 
 /* I followed an example on youtube by 'Slaying the Dragon' for this section*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-* {
-  margin: 0;
+.infinite-scroll {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .wrapper {
-  margin-top: 2rem;
-  width: 70%;
+  width: 100%;
   max-width: 1236px;
   margin-inline: auto;
-  height: 80px;
+  height: 80px; 
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -328,89 +329,46 @@ figure img {
   );
 }
 
-@keyframes scrollLeft {
-  to {
-    left: -200px;
-  }
+.row {
+  display: flex;
+  gap: 20px; 
+  position: absolute;
+  white-space: nowrap;
+  animation: scrollLeft linear 20s infinite; 
 }
 
-@keyframes scrollRight {
-  to {
-    right: -200px;
-  }
-}
-
-.itemLeft,
-.itemRight {
-  width: 150px;
-  height: 70px;
+.item {
+  height: 60px;
+  padding: 10px 30px;
   background-color: #797979;
   border-radius: 6px;
-  position: absolute;
-  animation-timing-function: linear;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  margin: auto;
-
-  i {
-    font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  
+  img {
+    width: 32px; 
+    height: 32px; 
+    margin-right: 10px; 
+    object-fit: contain; 
   }
+}
+.item p {
+  margin: 0;
+  font-size: 2rem;
+}
 
-  p {
-    font-size: 1.8rem;
-    margin-left: 10px;
-    color: #272629;
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
-}
-
-.itemLeft {
-  left: max(calc(180px * 8), 100%);
-  animation-name: scrollLeft;
-}
-
-.itemRight {
-  right: max(calc(180px * 8), calc(100% + 180px));
-  animation-name: scrollRight;
-}
-
-.item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-color: #e59c9c;
-}
-
-.item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-  background-color: #eec18c;
-}
-
-.item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-  background-color: #e9e4a1;
-}
-
-.item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-  background-color: #bbe9a1;
-}
-
-.item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-  background-color: #a1e9dc;
-}
-
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-  background-color: #a1abe9;
-}
-
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-  background-color: #d1a1e9;
-}
-
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-  background-color: #e9a1d7;
+  100% {
+    transform: translateX(-50%); /* Translate by 50% of the row width */
+  }
 }
 /*---------------------------------------------------------------------------*/
 /*----------------------------Contact-Me-------------------------------------*/
@@ -418,18 +376,18 @@ figure img {
 
 .contact-me {
   background-color: var(--background); 
-  ; 
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .contact-me h3 {
   color: var(--primary-colour); 
   font-size: 3.5rem; 
-  margin-bottom: 40px; 
+  margin-bottom: 20px; 
 }
 
 .contact-me form {
-  max-width: 600px;
+  max-width: 500px;
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -473,6 +431,8 @@ figure img {
   border-radius: 30px; 
   font-size: 1.2rem;
   cursor: pointer;
+  max-width: 180px;
+  margin: auto;
 }
 
 
@@ -596,10 +556,9 @@ footer {
     margin-right: 100px;
     font-size: 1.4rem;
   }
-
   .left-triangle,
   .right-triangle {
-    width: 100px;
+    display: none; 
   }
 
   .content {
@@ -633,17 +592,9 @@ footer {
       font-size: 1.5rem;
     }
   }
-}
 
-  #about-me figure {
-    width: 200px; 
-    height: 200px;
-  }
-
-@media (max-width: 480px) {
-  #about-me figure {
-    width: 150px; 
-    height: 150px;
+  figure {
+    
   }
 }
 
@@ -667,12 +618,7 @@ footer {
 
   .content {
     width: 100%;
-  }
-
-  .left-triangle,
-  .right-triangle {
-    display: none; 
-  }
+  }  
 
   .lg-25 {
     flex: 0 0 100%;
@@ -711,8 +657,5 @@ footer {
   footer .left-footer ul {
     gap: 10px;
   }
-  #about-me figure {
-    width: 150px; 
-    height: 150px;
-  }
+
 }
