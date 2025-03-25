@@ -4,8 +4,6 @@ This is my professional portfolio for my software development career, it is also
 
 ![Example of Portfolio ](./assets/img/example-01.png)
 
-
-
 ### Examples
 Some examples I used were [Malinda Lakshan's Porfolio](https://www.malindalakshan.com/), [Dev Khandelwal's Portfolio](https://slyro.vercel.app/) and [Andre Specht's Portfolio](https://andrespecht.dev/)
 
